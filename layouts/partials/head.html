@@ -1,0 +1,35 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{- if eq .URL "/" }}
+        <meta name="description" content="{{ .Site.Params.Description }}">
+    {{- else if .Description }}
+        <meta name="description" content="{{ .Description }}">
+    {{- end }}
+
+    <title>
+        {{- if eq .URL "/" }}
+            {{ .Site.Title }}
+        {{- else }}
+            {{ .Title }} &middot; {{ .Site.Title }}
+        {{- end }}
+    </title>
+
+    <!-- CSS -->
+    {{- $inServerMode	:= .Site.IsServer }}
+    {{- $cssTarget		:= "css/style.css" }}
+    {{- $cssOptions		:= cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}		
+    {{- $style			:= resources.Get "scss/hallo.scss" | toCSS $cssOptions }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL}}images/apple-touch-icon.png">
+
+    <!-- RSS -->
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+</head>

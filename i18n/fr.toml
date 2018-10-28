@@ -1,0 +1,8 @@
+[hello]
+other = "Bonjour"
+
+[i-am]
+other = "Je suis"
+
+[generator]
+other = "Fabriqué avec  <a href='https://gohugo.io'>Hugo</a> en utilisant le thème <a href='https://github.com/EmielH/hallo-hugo/'>Hallo</a>."

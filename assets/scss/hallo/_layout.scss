@@ -1,0 +1,40 @@
+.column {
+    flex: 1;
+}
+
+main {
+    display: flex;
+    margin-top: 20vh;
+
+    .column.left {
+        text-align: end;
+    }
+
+    .column.right {
+        h1 {
+            margin-left: -10px; /* Correction for margin of leftmost character. */
+            margin-bottom: 0.4em;
+        }
+
+        h2 {
+            margin-left: -4px; /* Correction for margin of leftmost character. */
+            margin-top: 0;
+        }
+        
+        .links {
+            margin-top: 2.5rem;
+            font-size: 1.5rem;
+
+            a {
+                margin-right: 0.5rem;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    margin-top: 3rem;
+    font-size: 0.75rem;
+}

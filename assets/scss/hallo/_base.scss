@@ -1,0 +1,46 @@
+html,
+body {
+    color: $default-light;
+    margin: 1rem;
+    padding: 0;
+}
+
+html {
+    font-family: $sans-serif;
+    font-size: 16px;
+    overflow-y: auto;
+
+    @media (min-width: 600px) {
+        font-size: 18px;
+    }
+}
+
+body {
+    background-color: $background-1;
+}
+
+a {
+    @include transition(color .2s ease-out);    
+    color: $default-light;
+
+    &:hover {
+        color: $default-dark;
+    }
+}
+
+h1 {
+    font-size: 9rem;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+img.portrait {
+    border-radius: 50%;
+    border: 10px solid $default-light;
+    margin: 2em 3em;
+    width: 300px;
+    height: 300px;
+}

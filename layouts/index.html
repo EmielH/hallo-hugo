@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+<main>
+    <div class="column left">
+        <img src="images/portrait.jpg" width="300" height="300" class="portrait" />
+    </div>
+    <div class="column right">
+        <h1>{{ i18n "hello" }}.</h1>
+        <h2>{{ i18n "i-am" }} {{ .Site.Author.name | default "Hallo" }}.</h2>
+        <p>{{- partial "introduction.html" . -}}</p>
+        
+        <div class="links">
+            {{- range .Site.Params.links -}}
+                <a href="{{ .url }}" title="{{ .title }}">
+                    <span class="{{ .iconset | default "fab" }} fa-{{ .icon }}"></span>
+                </a>
+            {{- end -}}
+        </div>
+    </div>
+</main>
+
+{{ end }}

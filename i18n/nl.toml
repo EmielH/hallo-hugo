@@ -1,0 +1,8 @@
+[hello]
+other = "Hallo"
+
+[i-am]
+other = "Ik ben"
+
+[generator]
+other = "Gemaakt met <a href='https://gohugo.io'>Hugo</a> en thema <a href='https://github.com/EmielH/hallo-hugo/'>Hallo</a>."
