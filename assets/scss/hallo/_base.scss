@@ -9,10 +9,6 @@ html {
     font-family: $sans-serif;
     font-size: 16px;
     overflow-y: auto;
-
-    @media (min-width: 600px) {
-        font-size: 18px;
-    }
 }
 
 body {
