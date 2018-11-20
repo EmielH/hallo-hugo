@@ -4,7 +4,7 @@
 
 main {
     display: flex;
-    margin-top: 20vh;
+    margin-top: 20vh;    
 
     .column.left {
         text-align: end;
@@ -31,10 +31,27 @@ main {
             }
         }
     }
+
+    @media screen and (max-width: $break-large) {
+        display: block;
+        margin-top: 0;
+
+        .column.left {
+            text-align: center;
+        }
+
+        .column.right h1 {
+            margin-top: 0;
+        }
+    }
 }
 
 footer {
     display: flex;
     margin-top: 3rem;
     font-size: 0.75rem;
+
+    @media screen and (max-width: $break-large) {
+        display: block;
+    }
 }
