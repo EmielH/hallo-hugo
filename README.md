@@ -1,5 +1,7 @@
 # Hallo
 
+[![Build Status](https://travis-ci.com/EmielH/hallo-hugo.svg?branch=master)](https://travis-ci.com/EmielH/hallo-hugo)
+
 Hallo is a single-page Hugo theme for personal introductions. Add a portrait, an introduction, several links, and you're set.
 
 ![Hallo screenshot](https://raw.githubusercontent.com/EmielH/hallo-hugo/master/images/screenshot.png)
