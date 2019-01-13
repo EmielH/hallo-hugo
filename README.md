@@ -107,6 +107,21 @@ Feel free to submit pull requests for other translations of Hallo's texts.
 
 [Hugo documentation for multilingual sites](//gohugo.io/content-management/multilingual/)
 
+### Colours
+
+You can alter the colours of your website using configuration options. Add the following to the `[params]` section of your `config.toml` for an alternate colour scheme:
+
+```
+    [params.colors]
+        background = "#81c6ff"
+        foreground = "#edf7ff"
+        hover = "#ffba82"
+```
+
+* `background`: Used as background colour of the site.
+* `foreground`: Used for text and the border of the portrait.
+* `hover`: Used for hover of links.
+
 ## Acknowledgments
 
 Stock portrait photo obtained [here](https://www.pexels.com/photo/adult-beautiful-blonde-blur-324658/).
