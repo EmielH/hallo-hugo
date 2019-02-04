@@ -120,6 +120,22 @@ You can alter the colours of your website using configuration options. Add the f
 * `foreground`: Used for text and the border of the portrait.
 * `hover`: Used for hover of links.
 
+> **Warning: When using Hugo Basic, you need to perform additional steps to make custom colors work.**
+>
+> If you get the following error message while building your site, you're using Hugo Basic:
+>
+> `error: failed to transform resource: TOCSS: failed to transform "style.hallo.scss" (text/x-scss): this feature is not available in your current Hugo version`
+>
+> The SCSS needs to be transpiled for your custom colours, which is something Hugo Basic cannot do. For the standard colours, the transpiled SCSS comes with the theme.
+>
+> If you're stuck with Hugo Basic, e.g. because your Hugo site is generated on a server that only has Hugo Basic installed, you can get custom colours to work by performing the following steps.
+>
+> 1. Install Hugo Extended on your local machine.
+> 2. Generate your site locally by running `hugo` on your local machine.
+> 3. Commit the generated `resources` folder to the root folder of your site. This folder can be found inside the `public` folder after running `hugo`.
+>
+> Hugo Basic will then use this `resources` folder to find the transpiled SCSS.
+
 ## Acknowledgments
 
 Stock portrait photo obtained [here](https://www.pexels.com/photo/adult-beautiful-blonde-blur-324658/).
