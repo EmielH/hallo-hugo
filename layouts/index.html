@@ -5,7 +5,11 @@
         <img src="images/portrait.jpg" width="300" height="300" class="portrait" alt="Portrait" />
     </div>
     <div class="column right">
-        <h1>{{ i18n "hello" }}.</h1>
+        {{- with .Param "greeting" -}}
+            <h1>{{ . }}</h1>
+        {{- else -}}
+            <h1>{{ i18n "hello" }}.</h1>
+        {{- end -}}
         <h2>{{ i18n "i-am" }} {{ .Site.Author.name | default "Hallo" }}.</h2>
         <p>{{- partial "introduction.html" . -}}</p>
         

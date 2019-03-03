@@ -136,6 +136,15 @@ You can alter the colours of your website using configuration options. Add the f
 >
 > Hugo Basic will then use this `resources` folder to find the transpiled SCSS.
 
+### Greeting text
+
+By default, the theme uses the translation of the word 'Hello' for the language of your site. You can also choose to alter this text completely. To do so, add the parameter `greeting` to your `config.toml`, like so:
+
+```
+[params]
+    greeting = "Greetings!"
+```
+
 ## Acknowledgments
 
 Stock portrait photo obtained [here](https://www.pexels.com/photo/adult-beautiful-blonde-blur-324658/).
