@@ -36,25 +36,9 @@ main {
     @media (max-width: $break-extra-small) { 
         img.portrait {
             margin: 0;
+            width:291px;    
         }
-     
-        h1 {
-            font-size: 7rem;
-        }     
-    }
-
-    // Small devices (landscape phones, 576px and up)
-    @media (min-width: $break-small) { 
-
-    }
-
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: $break-medium) { 
-
-    }
-
-    // Large devices (desktops, 992px and up)
-    @media (min-width: $break-large) { 
+        
         display: block;
         margin-top: 0;
 
@@ -64,7 +48,28 @@ main {
 
         .column.right h1 {
             margin-top: 0;
-        }
+            font-size: 6rem;
+            margin-left: 0;
+        } 
+
+        .column.right h2 {
+            margin-left: 0;
+        }  
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: $break-small) { 
+        margin-top:0;
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: $break-medium) { 
+
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: $break-large) { 
+
     }
 
     // Extra large devices (large desktops, 1200px and up)
