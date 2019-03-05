@@ -32,7 +32,29 @@ main {
         }
     }
 
-    @media screen and (max-width: $break-large) {
+    // Extra small devices (portrait phones, less than 576px)
+    @media (max-width: $break-extra-small) { 
+        img.portrait {
+            margin: 0;
+        }
+     
+        h1 {
+            font-size: 7rem;
+        }     
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: $break-small) { 
+
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: $break-medium) { 
+
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: $break-large) { 
         display: block;
         margin-top: 0;
 
@@ -44,6 +66,12 @@ main {
             margin-top: 0;
         }
     }
+
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: $break-extra-large) { 
+
+    }
+     
 }
 
 footer {
