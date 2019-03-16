@@ -11,9 +11,8 @@ install:
   - mv hugo ~/bin/
   - hugo version
   - gem install html-proofer
-  - git clone https://github.com/gohugoio/hugoBasicExample.git
 
 script:
-  - cd hugoBasicExample
+  - cd exampleSite
   - hugo -t hallo-hugo --themesDir ../..
   - htmlproofer public --check-html --disable-external
