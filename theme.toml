@@ -4,7 +4,7 @@
 name = "Hallo"
 license = "MIT"
 licenselink = "https://github.com/EmielH/hallo-hugo/blob/master/LICENSE"
-description = "Hallo is a single-page Hugo theme for personal introductions."
+description = "Hallo is a single-page Hugo theme to introduce yourself."
 homepage = "https://github.com/EmielH/hallo-hugo"
 tags = ["minimal", "clean", "responsive", "simple", "personal", "starter", "single page", "onepage", "Font Awesome", "landing page"]
 features = []
