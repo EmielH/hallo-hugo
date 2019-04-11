@@ -15,7 +15,7 @@
         
         <div class="links">
             {{- range .Site.Params.links -}}
-                <a href="{{ .url }}" title="{{ .title }}">
+                <a rel="me" href="{{ .url }}" title="{{ .title }}">
                     <span class="{{ .iconset | default "fab" }} fa-{{ .icon }}"></span>
                 </a>
             {{- end -}}
