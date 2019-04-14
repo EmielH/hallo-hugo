@@ -32,5 +32,5 @@
     <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
 
     <!-- RSS -->
-    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 </head>
