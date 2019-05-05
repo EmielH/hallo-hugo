@@ -145,6 +145,10 @@ By default, the theme uses the translation of the word 'Hello' for the language 
     greeting = "Greetings!"
 ```
 
+### Google Analytics
+
+The theme supports Google Analytics. To use Google Analytics, specify the parameter `googleAnalytics` in your `config.toml`. This will add the code for Google Analytics when you generate your site for production. It will not be included for any environment other than production (e.g. when using `hugo serve`).
+
 ## Acknowledgments
 
 Stock portrait photo obtained [here](https://www.pexels.com/photo/adult-beautiful-blonde-blur-324658/).
