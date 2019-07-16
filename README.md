@@ -91,6 +91,29 @@ It is possible to use an icon from [the solid set](https://fontawesome.com/icons
         url = "mailto:mail@example.org"
 ```
 
+### Additional content
+
+It's possible to add additional content to your site, for example a contact form. You can add this in `/layouts/partials/content.html`. Additional content will always be added "below the fold", ie. your introduction will always fill 100% of the height of the screen.
+
+To link to your additional information using one of the icon links, add an id to one of the tags in the content, like so:
+
+```
+<h3 id="info">Additional information</h3>
+
+<p>Lorem ipsum</p>
+```
+
+You can then add a link to this additional information in your site config, like so:
+
+```
+[params]
+    [[params.links]]
+        iconset = "fas"
+        icon = "info-circle"
+        title = "Additional information"
+        url = "#info"
+```
+
 ### Internationalisation (i18n)
 
 Hallo supports using other languages than English. Language files for the texts Hallo uses are provided in the `i18n` directory. The default language is English. To switch languages, add the key `defaultContentLanguage` to your `config.toml` file. For example:

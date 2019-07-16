@@ -16,7 +16,7 @@ body {
 }
 
 a {
-    @include transition(color .2s ease-out);    
+    @include transition(color .2s ease-out);
     color: $color-foreground;
 
     &:hover {
@@ -32,6 +32,12 @@ h2 {
     font-size: 3rem;
     font-weight: normal;
 }
+
+h3 {
+    font-size: 2rem;
+    font-weight: normal;
+}
+
 @media screen and (max-width: $break-large) {
     h1 {
         font-size: 15vw;
