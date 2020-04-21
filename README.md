@@ -93,6 +93,17 @@ It is possible to use an icon from [the solid set](https://fontawesome.com/icons
         url = "mailto:mail@example.org"
 ```
 
+It is also possible to use an icon from [the Academicon set](https://jpswalsh.github.io/academicons/). To do this, specify the icon set and icon origin.
+
+```
+    [[params.links]]
+        iconorigin = "ai"
+        iconset = "ai"
+        icon = "google-scholar"
+        title = "Google Scholar"
+        url = "https://scholar.google.com"
+```
+
 ### Internationalisation (i18n)
 
 Tale supports using other languages than English. Language files for the texts Hallo uses are provided in the `i18n` directory. The default language is English. To switch languages, add the key `defaultContentLanguage` to your `config.toml` file. For example:
