@@ -3,6 +3,7 @@ languageCode = "en"
 defaultContentLanguage = "en"
 title = "Hallo"
 theme = "hallo"
+disableKinds = ["page", "section", "taxonomy", "taxonomyTerm"]
 
 [Author]
     name = "Hallo"

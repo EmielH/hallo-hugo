@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/EmielH/hallo-hugo.svg?branch=master)](https://travis-ci.com/EmielH/hallo-hugo)
 
-Hallo is a single-page Hugo theme for personal introductions. Add a portrait, an introduction, several links, and you're set.
+Hallo is a single-page Hugo theme to introduce yourself. Add a portrait, an introduction, several links, and you're set.
 
 ![Hallo screenshot](https://raw.githubusercontent.com/EmielH/hallo-hugo/master/images/screenshot.png)
 
@@ -36,9 +36,7 @@ Alternatively, you can tell Hugo to use the theme with the `server` command.
 hugo server -t hallo
 ```
 
-### Additional information
-
-For more information, read the official [setup guide](https//gohugo.io/overview/installing/) of Hugo.
+_[Hugo setup guide](https//gohugo.io/overview/installing/)_
 
 ### Update the theme
 
@@ -104,9 +102,32 @@ It is also possible to use an icon from [the Academicon set](https://jpswalsh.gi
         url = "https://scholar.google.com"
 ```
 
+### Additional content
+
+It's possible to add additional content to your site, for example a contact form. You can add this in `/layouts/partials/content.html`. Additional content will always be added "below the fold", ie. your introduction will always fill 100% of the height of the screen.
+
+To link to your additional information using one of the icon links, add an id to one of the tags in the content, like so:
+
+```
+<h3 id="info">Additional information</h3>
+
+<p>Lorem ipsum</p>
+```
+
+You can then add a link to this additional information in your site config, like so:
+
+```
+[params]
+    [[params.links]]
+        iconset = "fas"
+        icon = "info-circle"
+        title = "Additional information"
+        url = "#info"
+```
+
 ### Internationalisation (i18n)
 
-Tale supports using other languages than English. Language files for the texts Hallo uses are provided in the `i18n` directory. The default language is English. To switch languages, add the key `defaultContentLanguage` to your `config.toml` file. For example:
+Hallo supports using other languages than English. Language files for the texts Hallo uses are provided in the `i18n` directory. The default language is English. To switch languages, add the key `defaultContentLanguage` to your `config.toml` file. For example:
 
 ```
 defaultContentLanguage = "nl"
@@ -116,7 +137,51 @@ To translate texts your site uses, add an `i18n` folder to your site.
 
 Feel free to submit pull requests for other translations of Hallo's texts.
 
-[Hugo documentation for multilingual sites](//gohugo.io/content-management/multilingual/)
+_[Hugo documentation for multilingual sites](//gohugo.io/content-management/multilingual/)_
+
+### Colors
+
+You can alter the colors of your website using configuration options. Add the following to the `[params]` section of your `config.toml` for an alternate color scheme:
+
+```
+    [params.colors]
+        background = "#81c6ff"
+        foreground = "#edf7ff"
+        hover = "#ffba82"
+```
+
+* `background`: Used as background color of the site.
+* `foreground`: Used for text and the border of the portrait.
+* `hover`: Used for hover of links.
+
+> **Warning: When using Hugo Basic, you need to perform additional steps to make custom colors work.**
+>
+> If you get the following error message while building your site, you're using Hugo Basic:
+>
+> `error: failed to transform resource: TOCSS: failed to transform "style.hallo.scss" (text/x-scss): this feature is not available in your current Hugo version`
+>
+> The SCSS needs to be transpiled for your custom colors, which is something Hugo Basic cannot do. For the standard colors, the transpiled SCSS comes with the theme.
+>
+> If you're stuck with Hugo Basic, e.g. because your Hugo site is generated on a server that only has Hugo Basic installed, you can get custom colors to work by performing the following steps.
+>
+> 1. Install Hugo Extended on your local machine.
+> 2. Generate your site locally by running `hugo` on your local machine.
+> 3. Commit the generated `resources` folder to the root folder of your site. This folder can be found inside the `public` folder after running `hugo`.
+>
+> Hugo Basic will then use this `resources` folder to find the transpiled SCSS.
+
+### Greeting text
+
+By default, the theme uses the translation of the word 'Hello' for the language of your site. You can also choose to alter this text completely. To do so, add the parameter `greeting` to your `config.toml`, like so:
+
+```
+[params]
+    greeting = "Greetings!"
+```
+
+### Google Analytics
+
+The theme supports Google Analytics. To use Google Analytics, specify the parameter `googleAnalytics` in your `config.toml`. This will add the code for Google Analytics when you generate your site for production. It will not be included for any environment other than production (e.g. when using `hugo serve`).
 
 ## Acknowledgments
 
