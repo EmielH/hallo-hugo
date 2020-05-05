@@ -91,6 +91,17 @@ It is possible to use an icon from [the solid set](https://fontawesome.com/icons
         url = "mailto:mail@example.org"
 ```
 
+It is also possible to use an icon from [the Academicon set](https://jpswalsh.github.io/academicons/). To do this, specify the icon set and icon origin.
+
+```
+    [[params.links]]
+        iconorigin = "ai"
+        iconset = "ai"
+        icon = "google-scholar"
+        title = "Google Scholar"
+        url = "https://scholar.google.com"
+```
+
 ### Additional content
 
 It's possible to add additional content to your site, for example a contact form. You can add this in `/layouts/partials/content.html`. Additional content will always be added "below the fold", ie. your introduction will always fill 100% of the height of the screen.
