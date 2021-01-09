@@ -36,7 +36,7 @@ Alternatively, you can tell Hugo to use the theme with the `server` command.
 hugo server -t hallo
 ```
 
-_[Hugo setup guide](https//gohugo.io/overview/installing/)_
+_[Hugo setup guide](https://gohugo.io/overview/installing/)_
 
 ### Update the theme
 
