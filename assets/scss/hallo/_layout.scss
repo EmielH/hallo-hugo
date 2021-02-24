@@ -14,6 +14,8 @@ main {
 
     .column.left {
         text-align: end;
+        display: flex;
+        justify-content: flex-end;
     }
 
     .column.right {
