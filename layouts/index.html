@@ -3,7 +3,7 @@
 <main>
     <div class="block introduction">
         <div class="column left">
-            <img src="images/portrait.jpg" class="portrait" alt="Portrait" />
+            <img src="{{ default "images/portrait.jpg" .Site.Author.portrait | relURL }}" class="portrait" alt="Portrait" />
         </div>
         <div class="column right">
             {{- with .Param "greeting" -}}
