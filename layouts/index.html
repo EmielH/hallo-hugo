@@ -3,7 +3,7 @@
 <main>
     <div class="block introduction">
         <div class="column left">
-            <img src="{{ default "images/portrait.jpg" .Site.Author.portrait | relURL }}" class="portrait" alt="Portrait" />
+            <img src="{{ default "images/portrait.jpg" .Site.Params.Author.portrait | relURL }}" class="portrait" alt="Portrait" />
         </div>
         <div class="column right">
             {{- with .Param "greeting" -}}
@@ -11,7 +11,7 @@
             {{- else -}}
                 <h1>{{ i18n "hello" }}.</h1>
             {{- end -}}
-            <h2>{{ i18n "i-am" }} {{ .Site.Author.name | default "Hallo" }}.</h2>
+            <h2>{{ i18n "i-am" }} {{ .Site.Params.Author.name | default "Hallo" }}.</h2>
             <p>{{- partial "introduction.html" . -}}</p>
 
             <div class="links">
