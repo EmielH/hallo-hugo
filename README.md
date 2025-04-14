@@ -60,10 +60,10 @@ Put your own introduction text in `/layouts/partials/introduction.html` of your 
 
 ### Name
 
-Hallo will use the name of the author that has been configured in the `Author` section of your site's `config.toml`. Add the lines below to your `config.toml` to configure the name.
+Hallo will use the name of the author that has been configured in the `params.author` section of your site's `config.toml`. Add the lines below to your `config.toml` to configure the name.
 
 ```
-[Author]
+[params.author]
     name = "Emiel"
 ```
 
